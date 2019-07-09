@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{75AD03A0-214D-4573-8B4E-7A5F9500201F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CareerCloud.BusinessLogicLayer</RootNamespace>
+    <AssemblyName>CareerCloud.BusinessLogicLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicantEducationLogic.cs" />
+    <Compile Include="ApplicantJobApplicationLogic.cs" />
+    <Compile Include="ApplicantProfileLogic.cs" />
+    <Compile Include="ApplicantResumeLogic.cs" />
+    <Compile Include="ApplicantSkillLogic.cs" />
+    <Compile Include="ApplicantWorkHistoryLogic.cs" />
+    <Compile Include="BaseLogic.cs" />
+    <Compile Include="BaseLogicSystem.cs" />
+    <Compile Include="CompanyDescriptionLogic.cs" />
+    <Compile Include="CompanyJobDescriptionLogic.cs" />
+    <Compile Include="CompanyJobEducationLogic.cs" />
+    <Compile Include="CompanyJobLogic.cs" />
+    <Compile Include="CompanyJobSkillLogic.cs" />
+    <Compile Include="CompanyLocationLogic.cs" />
+    <Compile Include="CompanyProfileLogic.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SecurityLoginLogic.cs" />
+    <Compile Include="SecurityLoginsLogLogic.cs" />
+    <Compile Include="SecurityLoginsRoleLogic.cs" />
+    <Compile Include="SecurityRoleLogic.cs" />
+    <Compile Include="SystemCountryCodeLogic.cs" />
+    <Compile Include="SystemLanguageCodeLogic.cs" />
+    <Compile Include="ValidationException.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CareerCloud.DataAccessLayer\CareerCloud.DataAccessLayer.csproj">
+      <Project>{02EA6319-DBF4-4C0C-B675-D589451B5778}</Project>
+      <Name>CareerCloud.DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CareerCloud.Pocos\CareerCloud.Pocos.csproj">
+      <Project>{EC791D9C-8EC2-46EF-A8A8-05AFF7C574A8}</Project>
+      <Name>CareerCloud.Pocos</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
